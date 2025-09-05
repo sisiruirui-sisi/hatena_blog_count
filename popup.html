@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 280px;
+            padding: 16px;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 16px;
+            color: #495057;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .counter-container {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .counter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .counter-item:last-child {
+            border-bottom: none;
+            padding-top: 12px;
+            font-weight: 600;
+            background: #f8f9fa;
+            margin: 8px -16px -16px -16px;
+            padding: 12px 16px;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .counter-label {
+            color: #495057;
+            font-size: 14px;
+        }
+        
+        .counter-value {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-weight: 600;
+            color: #28a745;
+            font-size: 16px;
+        }
+        
+        .counter-value.caution {
+            color: #fd7e14;
+        }
+        
+        .counter-value.warning {
+            color: #dc3545;
+        }
+        
+        .error-message {
+            text-align: center;
+            color: #dc3545;
+            padding: 20px;
+            font-size: 14px;
+        }
+        
+        .refresh-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        
+        .refresh-button:hover {
+            background: #0056b3;
+        }
+        
+        .auto-refresh {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">📝 文字数カウンター</div>
+    
+    <div id="counter-display" class="counter-container">
+        <div class="counter-item">
+            <span class="counter-label">タイトル</span>
+            <span class="counter-value" id="title-count">-</span>
+        </div>
+        <div class="counter-item">
+            <span class="counter-label">本文</span>
+            <span class="counter-value" id="body-count">-</span>
+        </div>
+        <div class="counter-item">
+            <span class="counter-label">合計</span>
+            <span class="counter-value" id="total-count">-</span>
+        </div>
+    </div>
+    
+    <div id="error-display" class="error-message" style="display: none;">
+        はてなブログの編集ページで<br>このポップアップを開いてください
+        <br><br>
+        <button class="refresh-button" id="refresh-btn">再読み込み</button>
+    </div>
+    
+    <div class="auto-refresh">
+        自動更新中... (1秒毎)
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

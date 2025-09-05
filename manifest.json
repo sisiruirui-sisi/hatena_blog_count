@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "はてなブログ文字数カウンター",
+  "version": "1.0",
+  "description": "はてなブログの記事編集画面で文字数をカウントします",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "文字数カウンター"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://blog.hatena.ne.jp/*/*/edit*",
+        "https://blog.hatena.ne.jp/*/edit*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

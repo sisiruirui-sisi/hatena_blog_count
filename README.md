@@ -17,3 +17,5 @@ MITライセンスです(添付忘れました、ごめんなさい(;｜｜))
 [ここにリンクがあります。２](https://akumunoyami.hatenadiary.jp/entry/2025/06/07/194443)
 
 ![スクリーンショット](https://i.gyazo.com/dc1b327236ba00779816c25efaf97eb5.png "スクリーンショット")
+
+![スクリーンショット](https://i.gyazo.com/49f63c7f9ade17c0e3726db922f22cc8.gif "スクリーンショット")
